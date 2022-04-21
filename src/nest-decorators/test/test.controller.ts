@@ -1,5 +1,5 @@
 import { Controller, Get, NotFoundException, Param, Req } from '@nestjs/common';
-import { ActionVerb, ServiceType } from '../interfaces';
+import { ActionVerb, ServiceType } from '../../interfaces';
 import { AuditLogger } from '../audit-logging.decorator';
 import { TestError } from './test.error';
 

@@ -1,7 +1,7 @@
 export interface AuditLogMessage {
   actor: {
     type: string;
-    id: string;
+    id: string | number;
   };
   service: {
     type: string;
@@ -13,7 +13,7 @@ export interface AuditLogMessage {
   };
   object: {
     type: string;
-    id: string;
+    id: string | number;
   };
   pii: string[];
   outcome: string;
@@ -109,9 +109,9 @@ export interface AuditLogOptions {
 }
 
 export interface AuditLogParams {
-  actorId: string;
+  actorId: string | number;
   actionVerb: ActionVerb;
-  objectId: string;
+  objectId: string | number;
   outcome: Outcome;
   pii: PII[];
 }

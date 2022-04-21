@@ -8,12 +8,12 @@ import {
 } from './interfaces';
 
 export type Transport = {
-  log: (subject: string, payload: any) => Promise<any>;
+  log: (subject: string, payload: any) => Promise<any> | void;
 };
 
 export interface AuditLoggerParams {
-  actorIdGetter: (req: any) => string;
-  objectIdGetter: (req: any) => string;
+  actorIdGetter: (req: any) => string | number;
+  objectIdGetter: (req: any) => string | number;
   action: ActionVerb;
   pii?: PII[];
   outcome: Outcome;

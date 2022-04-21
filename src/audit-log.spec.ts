@@ -10,16 +10,6 @@ import {
   ObjectType,
 } from './interfaces';
 
-jest.mock('process', () => {
-  return {
-    hrtime: {
-      bigint: () => {
-        return BigInt('1566069762291702');
-      },
-    },
-  };
-});
-
 jest
   .useFakeTimers('modern')
   .setSystemTime(new Date('2022-03-16T11:01:58.135Z'));
