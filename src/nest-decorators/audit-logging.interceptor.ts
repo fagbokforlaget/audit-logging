@@ -9,10 +9,9 @@ import { Reflector } from '@nestjs/core';
 import { Observable } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { MetadataKey } from './audit-logging.interfaces';
-import { ActionVerb, AuditLog, AuditLogParams, Outcome } from '../..';
+import { Outcome } from '../..';
 import { AuditLoggerParams } from './audit-logging.decorator';
-import { AuditLogOptions } from '../interfaces';
-import { BaseAuditLogger, Transport } from '../audit-logger';
+import { BaseAuditLogger } from '../audit-logger';
 
 @Injectable()
 export class AuditLoggingInterceptor implements NestInterceptor {
