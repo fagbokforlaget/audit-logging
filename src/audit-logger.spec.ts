@@ -65,6 +65,7 @@ describe('BaseAuditLoger', () => {
     let baseAuditLogger: BaseAuditLogger;
     beforeEach(() => {
       jest.spyOn(transport, 'log');
+      jest.spyOn(auditLog, 'message');
       baseAuditLogger = new BaseAuditLogger(subject, auditLog, transport);
       baseAuditLogger.log(params, {});
     });
@@ -73,7 +74,11 @@ describe('BaseAuditLoger', () => {
       expect(transport.log).toHaveBeenCalled();
     });
 
-    it('has correct timestamp', async () => {
+    it('auditLog builder has been called', async () => {
+      expect(auditLog.message).toHaveBeenCalled();
+    });
+
+    it('log correct message', async () => {
       expect(transport.log).toHaveBeenCalledWith('test.subject', message);
     });
   });

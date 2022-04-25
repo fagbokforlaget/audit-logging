@@ -8,7 +8,7 @@ import {
 } from './interfaces';
 
 export type Transport = {
-  log: (subject: string, payload: any) => Promise<any> | void;
+  log: (subject: string, payload: any) => Promise<any> | any;
 };
 
 export interface AuditLoggerParams {

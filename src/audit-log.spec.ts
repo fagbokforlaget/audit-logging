@@ -19,7 +19,7 @@ describe('AuditLog Message', () => {
     const log = new AuditLog({
       actionType: ActionType.Object,
       actorType: ActorType.Eportal,
-      service: { type: ServiceType.App, id: 'edtech.namespace' },
+      service: { type: ServiceType.App, id: 'test.subject' },
       objectType: ObjectType.ErudioNamespace,
     });
     const actorId = uuid4();
