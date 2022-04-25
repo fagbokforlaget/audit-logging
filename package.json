@@ -10,7 +10,8 @@
     "prepublishOnly": "npm test && npm run lint",
     "test": "jest",
     "test:cov": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:nestjs": "jest --config ./test/jest-e2e.json --forceExit --runInBand"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,8 @@
     "@nestjs/platform-express": "^8.4.4",
     "@nestjs/testing": "^8.4.4",
     "@types/jest": "^27.4.1",
+    "@types/supertest": "^2.0.12",
+    "@types/uuid": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "@typescript-eslint/parser": "^5.19.0",
     "eslint": "^8.13.0",
