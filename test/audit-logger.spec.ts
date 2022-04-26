@@ -1,5 +1,9 @@
-import { AuditLog } from './audit-log.model';
-import { AuditLoggerParams, BaseAuditLogger, Transport } from './audit-logger';
+import { AuditLog } from '../src/audit-log.model';
+import {
+  AuditLoggerParams,
+  BaseAuditLogger,
+  Transport,
+} from '../src/audit-logger';
 import {
   ActionVerb,
   Outcome,
@@ -7,7 +11,7 @@ import {
   ActorType,
   ServiceType,
   ObjectType,
-} from './interfaces';
+} from '../src/interfaces';
 
 jest
   .useFakeTimers('modern')

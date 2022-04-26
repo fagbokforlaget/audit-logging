@@ -1,5 +1,5 @@
 import { v4 as uuid4 } from 'uuid';
-import { AuditLog } from './audit-log.model';
+import { AuditLog } from '../src/audit-log.model';
 import {
   ActionVerb,
   Outcome,
@@ -8,7 +8,7 @@ import {
   ActorType,
   ServiceType,
   ObjectType,
-} from './interfaces';
+} from '../src/interfaces';
 
 jest
   .useFakeTimers('modern')
