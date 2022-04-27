@@ -78,7 +78,7 @@ export enum ObjectType {
   DbokBook = 'urn:forlagshuset:object:dbok:book',
   DpmBook = 'urn:forlagshuset:object:dpm:book',
   DpmUser = 'urn:forlagshuset:object:dpm:user',
-  ePortalProduct = 'urn:forlagshuset:object:eportal:product',
+  EportalProduct = 'urn:forlagshuset:object:eportal:product',
   PortfolioCourse = 'urn:forlagshuset:object:portfolio:course',
   PortfolioGroup = 'urn:forlagshuset:object:portfolio:group',
 }
