@@ -1,10 +1,8 @@
 # Audit Logging
 
-**WIP**
+Library to facilitate constructing and sending audit log messages.
 
-Currently it's a copy&paste from a service where this audit logging feature had been developed. It has to be cleaned up, fixed and tested.
-
-Typical usecase:
+## Usecase
 
 ```
 const auditLog = new AuditLog({
@@ -17,7 +15,7 @@ const auditLog = new AuditLog({
   };
 });
 const auditLogger = new BaseAuditLogger("audit.subject", auditLog, console);
-const req = /* any object actually that we can take data from */ {actor_id: 3, object_id: 4}
+const req = /* any object that we can take data from, typically it should be a request */ {actor_id: 3, object_id: 4}
 const params = {
   actorIdGetter: (req: any) => req.actor_id,
   objectIdGetter: (req: any) => req.object_id,
